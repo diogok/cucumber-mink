@@ -23,6 +23,8 @@ import Step from './step.js';
 import configureDriver from './driver.js';
 import definitions from './step_definitions/index.js';
 
+import Api from './step_definitions/api.js'
+
 /**
  * Private
  */
@@ -168,6 +170,9 @@ class Mink {
    * @returns {void}
    */
   registerHooks(cucumber, driver) {
+
+    Api(cucumber)
+
     cucumber.registerHandler('BeforeFeatures', (/* event */) =>
       driver.init().then(() => (
         driver.setViewportSize(driver.parameters.viewportSize)
