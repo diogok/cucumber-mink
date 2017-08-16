@@ -19,4 +19,5 @@ CMD ["/docker-start.sh"]
 ENV BROWSER chrome
 ENV HOST selenium
 ENV PORT 4444
+ENV TIMEOUT 15000
 

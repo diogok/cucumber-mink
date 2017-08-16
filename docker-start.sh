@@ -2,10 +2,10 @@
 
 sleep 5
 
-echo nodejs /usr/share/src/cucumber-mink/dist/cli.js --port $PORT --host $HOST --browser $BROWSER -r .
+echo nodejs /usr/share/src/cucumber-mink/dist/cli.js --port $PORT --host $HOST --browser $BROWSER --timeout $TIMEOUT -r .
 
 cd /opt 
 
-nodejs /usr/share/src/cucumber-mink/dist/cli.js --port $PORT --host $HOST --browser $BROWSER -r .
+nodejs /usr/share/src/cucumber-mink/dist/cli.js --port $PORT --host $HOST --browser $BROWSER --timeout $TIMEOUT -r .
  
 
