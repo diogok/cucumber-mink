@@ -19,8 +19,8 @@ const wait = function (seconds) {
   return Promise.delay(parseInt(seconds, 10) * 1000);
 };
 
-const screenshot = function () {
-  return this.driver.saveScreenshot('./screenshot.png');
+const screenshot = function (to) {
+  return this.driver.saveScreenshot('./'+to+'.png');
 };
 
 /**
@@ -30,5 +30,5 @@ const screenshot = function () {
 export default [
   [/I wait (\d+) seconds?/, wait],
   [/the viewport is (\d+)px width and (\d+)px height/, viewport],
-  [/I take a screenshot/, screenshot],
+  [/I take a screenshot to "([^"]+)"/, screenshot],
 ];
